@@ -43,22 +43,22 @@ public class Game
 
             while(!bValidAction)
             {
-                if(sCommand.equalsIgnoreCase("walk north"))
+                if(sCommand.equalsIgnoreCase("walk north") && aRooms[iCurrentRoom].getNextRoom(Room.NORTH) != Room.NO_DOORS)
                 {
                     iCurrentRoom = aRooms[iCurrentRoom].getNextRoom(Room.NORTH);
                     bValidAction = true;
                 }
-                else if(sCommand.equalsIgnoreCase("walk east"))
+                else if(sCommand.equalsIgnoreCase("walk east") && aRooms[iCurrentRoom].getNextRoom(Room.EAST) != Room.NO_DOORS)
                 {
                     iCurrentRoom = aRooms[iCurrentRoom].getNextRoom(Room.EAST);
                     bValidAction = true;
                 }
-                else if(sCommand.equalsIgnoreCase("walk south"))
+                else if(sCommand.equalsIgnoreCase("walk south") && aRooms[iCurrentRoom].getNextRoom(Room.SOUTH) != Room.NO_DOORS)
                 {
                     iCurrentRoom = aRooms[iCurrentRoom].getNextRoom(Room.SOUTH);
                     bValidAction = true;
                 }
-                else if(sCommand.equalsIgnoreCase("walk west"))
+                else if(sCommand.equalsIgnoreCase("walk west") && aRooms[iCurrentRoom].getNextRoom(Room.WEST) != Room.NO_DOORS)
                 {
                     iCurrentRoom = aRooms[iCurrentRoom].getNextRoom(Room.WEST);
                     bValidAction = true;
